@@ -1,5 +1,5 @@
 const ball = document.getElementById('ball');
-const answer = document.getElementById('answer');
+const triangle = document.getElementById('triangle');
 const askButton = document.getElementById('askButton');
 
 const answers = [
@@ -9,7 +9,7 @@ const answers = [
     "Спроси позже", 
     "Не могу предсказать", 
     "Бесспорно", 
-    "Подумай и спроси снова",
+    "Сконцентрируйся и спроси снова",
     "Вероятно", 
     "Знаки говорят — да", 
     "Знаки говорят — нет", 
@@ -53,20 +53,20 @@ const answers = [
     "Ты сбился с пути", 
     "Все будет хорошо", 
     "Все будет не очень"
+];
 
 askButton.addEventListener('click', () => {
     // Анимация тряски шара
     ball.style.animation = 'shake 0.5s';
 
-    // Скрываем текст перед новым ответом
-    answer.style.opacity = '0';
+    // Скрываем треугольник перед новым ответом
+    triangle.style.display = 'none';
 
     // После завершения анимации показываем ответ
     setTimeout(() => {
         const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-        answer.textContent = randomAnswer;
-        answer.style.opacity = '1'; // Показываем текст
-        answer.style.animation = 'textAppear 0.5s ease-in-out'; // Анимация появления текста
+        triangle.textContent = randomAnswer; // Ответ внутри треугольника
+        triangle.style.display = 'flex'; // Показываем треугольник
         ball.style.animation = ''; // Сбрасываем анимацию
     }, 500);
 });
