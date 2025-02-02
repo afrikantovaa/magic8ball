@@ -1,6 +1,7 @@
 const ball = document.getElementById('ball');
-const window = document.getElementById('triangle');
+const window = document.getElementById('window');
 const askButton = document.getElementById('askButton');
+const answer = document.getElementById('answer');
 
 const answers = [
     "Да", 
@@ -59,12 +60,15 @@ askButton.addEventListener('click', () => {
     // Анимация тряски шара
     ball.style.animation = 'shake 0.5s';
 
+    // Скрываем текст перед новым ответом
+    answer.style.opacity = '0';
 
     // После завершения анимации показываем ответ
     setTimeout(() => {
         const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-        triangle.textContent = randomAnswer; // Ответ внутри треугольника
-        triangle.style.display = 'flex'; // Показываем треугольник
+        answer.textContent = randomAnswer;
+        answer.style.opacity = '1'; // Показываем текст
+        answer.style.animation = 'textAppear 0.5s ease-in-out'; // Анимация появления текста
         ball.style.animation = ''; // Сбрасываем анимацию
     }, 500);
 });
