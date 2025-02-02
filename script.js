@@ -1,5 +1,5 @@
 const ball = document.getElementById('ball');
-const triangle = document.getElementById('triangle');
+const window = document.getElementById('triangle');
 const askButton = document.getElementById('askButton');
 
 const answers = [
@@ -59,8 +59,6 @@ askButton.addEventListener('click', () => {
     // Анимация тряски шара
     ball.style.animation = 'shake 0.5s';
 
-    // Скрываем треугольник перед новым ответом
-    triangle.style.display = 'none';
 
     // После завершения анимации показываем ответ
     setTimeout(() => {
