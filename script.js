@@ -66,9 +66,9 @@ askButton.addEventListener('click', () => {
     // После завершения анимации показываем ответ
     setTimeout(() => {
         const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-        answer.textContent = randomAnswer;
-        answer.style.opacity = '1'; // Показываем текст
-        answer.style.animation = 'textAppear 0.5s ease-in-out'; // Анимация появления текста
+        window.textContent = randomAnswer;
+        window.style.opacity = '1'; // Показываем текст
+        window.style.animation = 'textAppear 0.5s ease-in-out'; // Анимация появления текста
         ball.style.animation = ''; // Сбрасываем анимацию
     }, 500);
 });
