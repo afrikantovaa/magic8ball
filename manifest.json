@@ -1,0 +1,16 @@
+{
+  "short_name": "Magic 8 Ball",
+  "name": "Magic 8 Ball Game",
+  "description": "Игра Magic 8 Ball с предсказаниями.",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
